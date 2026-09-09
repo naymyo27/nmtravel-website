@@ -1,1 +1,227 @@
 body{font-family:Arial,sans-serif;margin:0;line-height:1.6}header{background:#0f172a;color:#fff;padding:30px;text-align:center}.hero{background:#d4af37;color:#111;padding:40px;text-align:center}nav{background:#111;padding:10px;text-align:center}nav a{color:#fff;margin:0 10px;text-decoration:none}section{padding:20px}form input,form textarea{display:block;width:100%;max-width:500px;margin:10px 0;padding:10px}button{background:#0f172a;color:white;padding:10px 20px;border:0}
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828');
+    background-size:cover;
+    background-position:center;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+header h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.4rem;
+    max-width:700px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:#f8b400;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffcc29;
+    transform:translateY(-3px);
+}
+
+/* Navigation */
+nav{
+    background:#001f3f;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f8b400;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:2.5rem;
+    color:#001f3f;
+    margin-bottom:40px;
+}
+
+/* Service Cards */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#001f3f;
+    margin-bottom:15px;
+}
+
+/* Destination */
+.destinations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.destination{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.destination img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.destination-content{
+    padding:20px;
+}
+
+.destination-content h3{
+    color:#001f3f;
+}
+
+/* Booking Form */
+form{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#f8b400;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffcc29;
+}
+
+/* Contact */
+.contact{
+    background:#001f3f;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    color:white;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* Footer */
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    header p{
+        font-size:1rem;
+        padding:0 20px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+    }
+}
