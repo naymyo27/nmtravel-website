@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>N&M Travel Admin Demo</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="section"><div class="container"><h1>N&M Travel Admin Dashboard (Demo)</h1><p class="muted">This demo reads applications stored in the same browser's localStorage. Production version will use Supabase with secure staff login.</p><button class="btn primary" onclick="render()">Refresh</button> <button class="btn ghost" onclick="clearApps()">Clear Demo Data</button><div id="table" style="margin-top:25px;overflow:auto"></div></div></main>
+<script>
+function getApps(){return JSON.parse(localStorage.getItem("nm_apps")||"[]")}
+function saveApps(a){localStorage.setItem("nm_apps",JSON.stringify(a))}
+function render(){const a=getApps();document.getElementById("table").innerHTML=a.length?'<table style="width:100%;border-collapse:collapse"><tr><th>ID</th><th>Name</th><th>Country</th><th>Queue</th><th>Status</th></tr>'+a.map((x,i)=>'<tr><td>'+x.id+'</td><td>'+x.name+'</td><td>'+x.country+'</td><td>'+x.queue+'</td><td><select onchange="setStatus('+i+',this.value)"><option '+(x.status=="Waiting"?"selected":"")+'>Waiting</option><option '+(x.status=="Document Checking"?"selected":"")+'>Document Checking</option><option '+(x.status=="Processing"?"selected":"")+'>Processing</option><option '+(x.status=="Submitted"?"selected":"")+'>Submitted</option><option '+(x.status=="Completed"?"selected":"")+'>Completed</option></select></td></tr>').join("")+'</table>':'<p>No demo applications yet.</p>'}
+function setStatus(i,v){const a=getApps();a[i].status=v;saveApps(a);render()}
+function clearApps(){if(confirm("Clear demo data?")){localStorage.removeItem("nm_apps");render()}}
+render();
+</script></body></html>
