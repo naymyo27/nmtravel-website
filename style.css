@@ -1,4 +1,4 @@
-body{font-family:Arial,sans-serif;margin:0;line-height:1.6}header{background:#0f172a;color:#fff;padding:30px;text-align:center}.hero{background:#d4af37;color:#111;padding:40px;text-align:center}nav{background:#111;padding:10px;text-align:center}nav a{color:#fff;margin:0 10px;text-decoration:none}section{padding:20px}form input,form textarea{display:block;width:100%;max-width:500px;margin:10px 0;padding:10px}button{background:#0f172a;color:white;padding:10px 20px;border:0}
+--body{font-family:Arial,sans-serif;margin:0;line-height:1.6}header{background:#0f172a;color:#fff;padding:30px;text-align:center}.hero{background:#d4af37;color:#111;padding:40px;text-align:center}nav{background:#111;padding:10px;text-align:center}nav a{color:#fff;margin:0 10px;text-decoration:none}section{padding:20px}form input,form textarea{display:block;width:100%;max-width:500px;margin:10px 0;padding:10px}button{background:#0f172a;color:white;padding:10px 20px;border:0}
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
